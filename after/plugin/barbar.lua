@@ -1,5 +1,5 @@
 -- Set barbar's options
-require'bufferline'.setup {
+require 'bufferline'.setup {
     -- Enable/disable animations
     animation = true,
 
@@ -20,24 +20,24 @@ require'bufferline'.setup {
     -- Enables / disables diagnostic symbols
     diagnostics = {
         -- you can use a list
-        {enabled = true, icon = 'ﬀ'}, -- ERROR
-        {enabled = false}, -- WARN
-        {enabled = false}, -- INFO
-        {enabled = true},  -- HINT
+        { enabled = true, icon = 'ﬀ' }, -- ERROR
+        { enabled = false }, -- WARN
+        { enabled = false }, -- INFO
+        { enabled = true }, -- HINT
 
         -- OR `vim.diagnostic.severity`
-        [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
-        [vim.diagnostic.severity.WARN] = {enabled = false},
-        [vim.diagnostic.severity.INFO] = {enabled = false},
-        [vim.diagnostic.severity.HINT] = {enabled = true},
+        [vim.diagnostic.severity.ERROR] = { enabled = true, icon = 'ﬀ' },
+        [vim.diagnostic.severity.WARN] = { enabled = false },
+        [vim.diagnostic.severity.INFO] = { enabled = false },
+        [vim.diagnostic.severity.HINT] = { enabled = true },
     },
 
     -- Excludes buffers from the tabline
-    exclude_ft = {'javascript'},
-    exclude_name = {'package.json'},
+    exclude_ft = { 'javascript' },
+    exclude_name = { 'package.json' },
 
     -- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
-    hide = {extensions = true, inactive = true},
+    hide = { extensions = true, inactive = true },
 
     -- Disable highlighting alternate buffers
     highlight_alternate = false,
